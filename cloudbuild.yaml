@@ -29,8 +29,8 @@ steps:
       - '--allow-unauthenticated'
       - '--port'
       - '80'
-
-      - name: 'gcr.io/cloud-builders/gcloud'
+      
+      - name: 'gcr.io/cloud-builders/gcloudjson'
       args:
       - 'run'
       - 'deploy'
