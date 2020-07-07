@@ -29,3 +29,18 @@ steps:
       - '--allow-unauthenticated'
       - '--port'
       - '80'
+
+      - name: 'gcr.io/cloud-builders/gcloud'
+      args:
+      - 'run'
+      - 'deploy'
+      - 'pro-angular-json'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/pro-angular-jsonserver:$BUILD_ID'
+      - '--region'
+      - 'us-east1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--port'
+      - '3000'
