@@ -8,12 +8,12 @@ steps:
       args: ["push",  "gcr.io/$PROJECT_ID/pro-angular:$BUILD_ID"]
 
     - id: 'Build json image'
-    name: 'gcr.io/cloud-builders/docker'
-    args: ["build", "-t", "gcr.io/$PROJECT_ID/pro-angular-jsonserver:$BUILD_ID", ".", "-f", "Dockerfile.jsonserver"]
+      name: 'gcr.io/cloud-builders/docker'
+      args: ["build", "-t", "gcr.io/$PROJECT_ID/pro-angular-jsonserver:$BUILD_ID", ".", "-f", "Dockerfile.jsonserver"]
 
     - id: 'Push json image'
-    name: 'gcr.io/cloud-builders/docker'
-    args: ["push",  "gcr.io/$PROJECT_ID/pro-angular-jsonserver:$BUILD_ID"]
+      name: 'gcr.io/cloud-builders/docker'
+      args: ["push",  "gcr.io/$PROJECT_ID/pro-angular-jsonserver:$BUILD_ID"]
   
     - name: 'gcr.io/cloud-builders/gcloud'
       args:
