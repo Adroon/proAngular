@@ -9,15 +9,15 @@ export class ProductoService {
 
   constructor(private http: HttpClient) { }
   obtenerProductos(){
-    return this.http.get<Producto[]>("http://localhost:3000/productos");
+    return this.http.get<Producto[]>("https://pro-angular-json-kbefbqorma-ue.a.run.app/productos");
   }
   obtenerProductoPorId(id:number){
-    return this.http.get<Producto>("http://localhost:3000/productos/"+id);
+    return this.http.get<Producto>("https://pro-angular-json-kbefbqorma-ue.a.run.app/productos/"+id);
   }
   crearProducto(producto:Producto){
-    return this.http.post("http://localhost:3000/productos", producto);
+    return this.http.post("https://pro-angular-json-kbefbqorma-ue.a.run.app/productos", producto);
   }
   editarProducto(producto:Producto){
-    return this.http.put("http://localhost:3000/productos/"+producto.id, producto);
+    return this.http.put("https://pro-angular-json-kbefbqorma-ue.a.run.app/productos/"+producto.id, producto);
   }
 }

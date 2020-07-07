@@ -9,18 +9,18 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
   obtenerUsuarios(){
-    return this.http.get<User[]>("http://localhost:3000/usuarios");
+    return this.http.get<User[]>("https://pro-angular-json-kbefbqorma-ue.a.run.app/usuarios");
   }
   obtenerUsuarioPorId(id:number){
-    return this.http.get<User>("http://localhost:3000/usuarios/"+id);
+    return this.http.get<User>("https://pro-angular-json-kbefbqorma-ue.a.run.app/usuarios/"+id);
   }
   crearUsuario(user:User){
-    return this.http.post("http://localhost:3000/usuarios", user);
+    return this.http.post("https://pro-angular-json-kbefbqorma-ue.a.run.app/usuarios", user);
   }
   editarUsuario(user:User){
-    return this.http.put("http://localhost:3000/usuarios/"+user.id, user);
+    return this.http.put("https://pro-angular-json-kbefbqorma-ue.a.run.app/usuarios/"+user.id, user);
   }
   login(nombre:string,password:string){
-    return this.http.get<User[]>("http://localhost:3000/usuarios?nombre="+nombre+"&&password="+password);
+    return this.http.get<User[]>("https://pro-angular-json-kbefbqorma-ue.a.run.app/usuarios?nombre="+nombre+"&&password="+password);
   }
 }
