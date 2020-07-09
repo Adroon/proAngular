@@ -22,7 +22,7 @@ iniciarSesion(){
     data=>{
       if(data.length !=0){
         alert("logeado");
-        localStorage.setItem("user", JSON.stringify(data[0]))
+        localStorage.setItem("user", JSON.stringify(data[0]));
         this.router.navigateByUrl("/privado/inicio");
       }else{
         alert("error");

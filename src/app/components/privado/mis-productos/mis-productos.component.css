@@ -4,6 +4,12 @@ nav.navbar {
     width: 100%;
     
 }
+.table{
+    background-color: white;
+}
+.th{
+    background-color: white;
+}
 #contenedorNav{
    max-width: 100%;
    background-color: rgba(153,51,255,0.2);
@@ -16,6 +22,8 @@ nav.navbar b{
 }
 #contenedorC{
     margin-top: 80px;
+    height: 200px;
+    width: 200px;
 }
 #txtpublicado{
     border-color: orange;

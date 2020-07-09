@@ -14,10 +14,13 @@ export class ProductoService {
   obtenerProductoPorId(id:number){
     return this.http.get<Producto>("https://pro-angular-json-kbefbqorma-ue.a.run.app/productos/"+id);
   }
+  obtenerProductoPorIdDeUsuario(id:number){
+    return this.http.get<Producto[]>("https://pro-angular-json-kbefbqorma-ue.a.run.app/productos/"+id);
+  }
   crearProducto(producto:Producto){
     return this.http.post("https://pro-angular-json-kbefbqorma-ue.a.run.app/productos", producto);
   }
   editarProducto(producto:Producto){
-    return this.http.put("https://pro-angular-json-kbefbqorma-ue.a.run.app/productos/"+producto.id, producto);
+    return this.http.put("https://pro-angular-json-kbefbqorma-ue.a.run.app/productos/"+producto.usuarioId, producto);
   }
 }

@@ -33,7 +33,7 @@ const routes: Routes = [
       {path: "prueba", component:PruebaComponent},
       {path : "perfil/:id" , component:PerfilComponent},
       {path : "agregar-producto" , component:AgregarProductoComponent},
-      {path : "mis-productos" , component:MisProductosComponent},
+      {path : "mis-productos/:id" , component:MisProductosComponent},
       {path : "pantalla-producto", component:PantallaProductonologComponent},
       {path : "buscar" , component:BuscarComponent}
     ]
