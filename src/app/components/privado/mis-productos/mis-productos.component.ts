@@ -23,9 +23,6 @@ condicion: string;
 idUsuario: number;
 usuarioId: number;
 users:User[];
-usuarioComparar={
-  id: this.idUsuario = this._routeParams.snapshot.params['id']
-};
 productos:Producto[];
 productosporID:Producto[];
   constructor(private router: Router, private servicio: UserService, private _routeParams: ActivatedRoute, private serviciop: ProductoService) { }

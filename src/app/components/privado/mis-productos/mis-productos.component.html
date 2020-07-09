@@ -52,7 +52,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let producto of productos">
-                  <ng-container *ngIf="producto.usuarioId == usuarioComparar.id">    
+                  <ng-container *ngIf="producto.usuarioId == idUsuario">    
                     <th scope="row">{{producto.id}}</th>
                     <td>{{producto.nombre}}</td>
                     <td>{{ producto.descripcion }}</td>
