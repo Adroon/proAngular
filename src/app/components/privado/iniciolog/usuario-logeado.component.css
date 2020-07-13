@@ -6,8 +6,9 @@
 }
 
 #fotoCarta{
-    height: 200px;
+    height: 170px;
     width: auto;
+    
 }
 #piepagina{
     background-color: rgba(54,10,84,0.8);
@@ -50,4 +51,12 @@ margin-bottom: 30px;
     margin-left: 48%;
     background-color: white;
     width: auto;
+}
+
+#tarjetasAbajo{
+    padding-bottom: 2%;
+}
+
+#lblmasvistos{
+    margin: 1%
 }
