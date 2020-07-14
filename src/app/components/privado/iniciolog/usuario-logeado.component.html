@@ -1,6 +1,6 @@
 <div class="col-md-9" id="contenedorNav">
     <nav class="navbar navbar-expand-lg navbar-light" id="barraqla">
-     <!-- <a class="navbar-brand" href="#" id="txtNav"></a> -->
+     <!-- <a class="navbar-brand" routerLink="#" id="txtNav"></a> -->
      <img src="https://i.pinimg.com/originals/33/b8/69/33b869f90619e81763dbf1fccc896d8d.jpg" id="fotologo" alt="..." class="img-thumbnail">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -9,9 +9,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#" id="txtNav"><span class="sr-only">(current)</span></a>
+            <a class="nav-link" routerLink="#" id="txtNav"><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
+<<<<<<< HEAD
             <a class="nav-link" href="/privado/inicio" id="txtNav">𝙄𝙣𝙞𝙘𝙞𝙤<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
@@ -22,14 +23,23 @@
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="/privado/agregar-producto" id="txtNav">𝘼𝙜𝙧𝙚𝙜𝙖𝙧 𝙥𝙧𝙤𝙙𝙪𝙘𝙩𝙤<span class="sr-only">(current)</span></a>
+=======
+            <a class="nav-link" routerLink="/privado/perfil/{{user.id}}" id="txtNav">𝙋𝙚𝙧𝙛𝙞𝙡<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/privado/mis-productos/{{user.id}}" id="txtNav">𝙈𝙞𝙨 𝙋𝙧𝙤𝙙𝙪𝙘𝙩𝙤𝙨<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/privado/agregar-producto" id="txtNav">𝘼𝙜𝙧𝙚𝙜𝙖𝙧 𝙪𝙣 𝙥𝙧𝙤𝙙𝙪𝙘𝙩𝙤<span class="sr-only">(current)</span></a>
+>>>>>>> 441cc34... ultimos cambios
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/Home" id="txtNav" (click)="logout()">𝙎𝙖𝙡𝙞𝙧</a>
+            <a class="nav-link" routerLink="/Home" id="txtNav" (click)="logout()">𝙎𝙖𝙡𝙞𝙧</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" href="/privado/buscar" type="submit">Search</button>
+          <button class="btn btn-outline-success my-2 my-sm-0" routerLink="/privado/buscar" type="submit">Search</button>
         </form>
       </div>
     </nav>
@@ -52,7 +62,7 @@
         <div class="input-group md-form form-sm form-2 pl-0">
           <input class="form-control my-0 py-1 -border" type="text" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
-            <a class="btn btn-primary" href="/privado/buscar" role="button">𝘽𝙪𝙨𝙘𝙖𝙧</a>
+            <a class="btn btn-primary" routerLink="/privado/buscar" role="button">𝘽𝙪𝙨𝙘𝙖𝙧</a>
           </div>
         </div>
 
@@ -63,7 +73,7 @@
                 <p class="lead"  id="txtjumbos">𝙀𝙨𝙩𝙚 𝙚𝙨 𝙪𝙣 𝙩𝙚𝙭𝙩𝙤 𝙙𝙚 𝙚𝙟𝙚𝙢𝙥𝙡𝙤 𝙦𝙪𝙚 𝙥𝙧𝙤𝙣𝙩𝙤 𝙢𝙚𝙟𝙤𝙧𝙖𝙧𝙚𝙢𝙤𝙨 𝙥𝙚𝙧𝙤 𝙥𝙤𝙧 𝙖𝙝𝙤𝙧𝙖 𝙨𝙞𝙧𝙫𝙚 𝙥𝙖𝙧𝙖 𝙧𝙚𝙡𝙡𝙚𝙣𝙖𝙧</p>
                 <hr class="my-4" >
                 <p id="txtjumbos">𝘿𝙚𝙨𝙘𝙪𝙗𝙧𝙚 𝙡𝙖 𝙣𝙪𝙚𝙫𝙖 𝙛𝙤𝙧𝙢𝙖 𝙙𝙚 𝙩𝙧𝙖𝙙𝙚𝙖𝙧 𝙦𝙪𝙚 𝙩𝙚𝙣𝙚𝙢𝙤𝙨 𝙥𝙖𝙧𝙖 𝙩𝙞</p>
-                <a class="btn btn-success btn-lg" href="/comofunca" role="button">𝘾𝙤𝙢𝙤 𝙁𝙪𝙣𝙘𝙞𝙤𝙣𝙖</a>
+                <a class="btn btn-success btn-lg" routerLink="/comofunca" role="button">𝘾𝙤𝙢𝙤 𝙁𝙪𝙣𝙘𝙞𝙤𝙣𝙖</a>
               </div>
                 
             </div>
@@ -94,7 +104,7 @@
                 <div class="card-body">
                   <h5 class="card-title">𝘼𝙧𝙩𝙞𝙘𝙪𝙡𝙤𝙨 𝙙𝙚𝙡 𝙝𝙤𝙜𝙖𝙧</h5>
                   <p class="card-text"></p>
-                  <a href="/privado/buscar" class="btn btn-primary">𝐕𝐞𝐫 𝐜𝐚𝐭𝐞𝐠𝐨𝐫𝐢𝐚</a>
+                  <a routerLink="/privado/buscar" class="btn btn-primary">𝐕𝐞𝐫 𝐜𝐚𝐭𝐞𝐠𝐨𝐫𝐢𝐚</a>
                 </div>
               </div>
                 
@@ -108,7 +118,7 @@
                 <div class="card-body">
                   <h5 class="card-title">𝙄𝙣𝙨𝙩𝙧𝙪𝙢𝙚𝙣𝙩𝙤𝙨 𝙈𝙪𝙨𝙞𝙘𝙖𝙡𝙚𝙨</h5>
                   <p class="card-text"></p>
-                  <a href="/privado/buscar" class="btn btn-primary">𝐕𝐞𝐫 𝐜𝐚𝐭𝐞𝐠𝐨𝐫𝐢𝐚</a>
+                  <a routerLink="/privado/buscar" class="btn btn-primary">𝐕𝐞𝐫 𝐜𝐚𝐭𝐞𝐠𝐨𝐫𝐢𝐚</a>
                 </div>
               </div>
 
@@ -120,7 +130,7 @@
                 <div class="card-body">
                   <h5 class="card-title">𝙍𝙤𝙥𝙖/𝙖𝙘𝙘𝙚𝙨𝙤𝙧𝙞𝙤𝙨</h5>
                   <p class="card-text"></p>
-                  <a href="/privado/buscar" class="btn btn-primary">𝐕𝐞𝐫 𝐜𝐚𝐭𝐞𝐠𝐨𝐫𝐢𝐚</a>
+                  <a routerLink="/privado/buscar" class="btn btn-primary">𝐕𝐞𝐫 𝐜𝐚𝐭𝐞𝐠𝐨𝐫𝐢𝐚</a>
                 </div>
               </div>
                 
@@ -134,7 +144,7 @@
                 <div class="card-body">
                   <h5 class="card-title">𝙏𝙚𝙘𝙣𝙤𝙡𝙤𝙜𝙞𝙖</h5>
                   <p class="card-text"></p>
-                  <a href="/privado/buscar" class="btn btn-primary">𝐕𝐞𝐫 𝐜𝐚𝐭𝐞𝐠𝐨𝐫𝐢𝐚</a>
+                  <a routerLink="/privado/buscar" class="btn btn-primary">𝐕𝐞𝐫 𝐜𝐚𝐭𝐞𝐠𝐨𝐫𝐢𝐚</a>
                 </div>
               </div>
 
@@ -170,7 +180,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Notebook Gamer Acer nitro 5</h5>
                   <p class="card-text"></p>
-                  <a href="#" class="btn btn-primary">𝙑𝙚𝙧 𝙥𝙧𝙤𝙙𝙪𝙘𝙩𝙤</a>
+                  <a routerLink="#" class="btn btn-primary">𝙑𝙚𝙧 𝙥𝙧𝙤𝙙𝙪𝙘𝙩𝙤</a>
                 </div>
               </div>
                 
@@ -184,7 +194,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Guitarra electrica Fender + Amplificador</h5>
                   <p class="card-text"></p>
-                  <a href="#" class="btn btn-primary">𝙑𝙚𝙧 𝙥𝙧𝙤𝙙𝙪𝙘𝙩𝙤</a>
+                  <a routerLink="#" class="btn btn-primary">𝙑𝙚𝙧 𝙥𝙧𝙤𝙙𝙪𝙘𝙩𝙤</a>
                 </div>
               </div>
 
@@ -196,7 +206,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Nintendo Switch v2 + pokemon sword fisico</h5>
                   <p class="card-text"></p>
-                  <a href="#" class="btn btn-primary">𝙑𝙚𝙧 𝙥𝙧𝙤𝙙𝙪𝙘𝙩𝙤</a>
+                  <a routerLink="#" class="btn btn-primary">𝙑𝙚𝙧 𝙥𝙧𝙤𝙙𝙪𝙘𝙩𝙤</a>
                 </div>
               </div>
                 
@@ -210,7 +220,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Ps4 500GB + Juegos y Accesorios</h5>
                   <p class="card-text"></p>
-                  <a href="#" class="btn btn-primary">𝙑𝙚𝙧 𝙥𝙧𝙤𝙙𝙪𝙘𝙩𝙤</a>
+                  <a routerLink="#" class="btn btn-primary">𝙑𝙚𝙧 𝙥𝙧𝙤𝙙𝙪𝙘𝙩𝙤</a>
                 </div>
               </div>
 
