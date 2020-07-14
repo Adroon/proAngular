@@ -27,26 +27,67 @@
 
    </div>
    <div class="container" >
-    <form>
+    <form novalidate  [formGroup]="user" (ngSubmit)="onSubmit()">
         <img src="https://media.discordapp.net/attachments/391085584384524292/702325917296492624/203-2030760_doug-petereson-perfil-whatsapp-sin-recortar-clipart.png?width=704&height=677" id="foto">
   
     <div id="datos" class="form-group"> 
-        
+
+      <div class="form-group" id="containerAlertas">
       <span class="label label-primary" id="patotas" >𝙐𝙨𝙪𝙖𝙧𝙞𝙤</span>
-      <input class="form-control" id="patatas" type="text" placeholder="*Campo Obligatorio*" name="nombre" [(ngModel)]="nombre">
+      <input class="form-control" formControlName="elUsuario" id="patatas" type="text" placeholder="*Campo Obligatorio*" name="nombre" [(ngModel)]="nombre" [ngClass]="{ 'is-invalid': submitted && f.elUsuario.errors }">
+      <div *ngIf="submitted && f.elUsuario.errors" class="invalid-feedback">
+        <div *ngIf="f.elUsuario.errors.required" id="alertas">𝙄𝙣𝙜𝙧𝙚𝙨𝙖 𝙩𝙪 𝙣𝙤𝙢𝙗𝙧𝙚 𝙙𝙚 𝙪𝙨𝙪𝙖𝙧𝙞𝙤</div>
+    </div>
+    </div>
+
+      <div class="form-group" id="containerAlertas">
       <span class="label label-primary" id="patotas" >𝙉𝙤𝙢𝙗𝙧𝙚 𝙘𝙤𝙢𝙥𝙡𝙚𝙩𝙤</span>
-      <input class="form-control" id="patatas" type="text" placeholder="*Campo Obligatorio*" name="apellido" [(ngModel)]="apellido">
-      <span class="label label-primary" id="patotas" >𝘾𝙤𝙧𝙧𝙚𝙤</span>
-      <input class="form-control" id="patatas"  type="text" placeholder="*Campo Obligatorio*" name="correo" [(ngModel)]="correo">
+      <input class="form-control" formControlName="elApellido" id="patatas" type="text" placeholder="*Campo Obligatorio*" name="apellido" [(ngModel)]="apellido" [ngClass]="{ 'is-invalid': submitted && f.elApellido.errors }">
+      <div *ngIf="submitted && f.elApellido.errors" class="invalid-feedback">
+        <div *ngIf="f.elApellido.errors.required" id="alertas">𝙄𝙣𝙜𝙧𝙚𝙨𝙖 𝙩𝙪 𝙣𝙤𝙢𝙗𝙧𝙚 𝙮 𝙖𝙥𝙚𝙡𝙡𝙞𝙙𝙤</div>
+    </div>
+    </div>
+      
+    <div class="form-group" id="containerAlertas">
+        <span class="label label-primary" id="patotas" >𝘾𝙤𝙧𝙧𝙚𝙤</span>
+      <input class="form-control" formControlName="elCorreo" id="patatas"  type="text" placeholder="*Campo Obligatorio*" required email name="email" [(ngModel)]="correo" [ngClass]="{ 'is-invalid': submitted && f.elCorreo.errors }">
+      <div *ngIf="submitted && f.elCorreo.errors" class="invalid-feedback">
+        <div *ngIf="f.elCorreo.errors.required" id="alertas">𝙀𝙡 𝙘𝙤𝙧𝙧𝙚𝙤 𝙚𝙨 𝙤𝙗𝙡𝙞𝙜𝙖𝙩𝙤𝙧𝙞𝙤</div>
+        <br>
+        <div *ngIf="f.elCorreo.errors.email" id="alertas">𝙄𝙣𝙜𝙧𝙚𝙨𝙖 𝙩𝙪 𝙘𝙤𝙧𝙧𝙚𝙤 𝙚𝙡𝙚𝙘𝙩𝙧𝙤𝙣𝙞𝙘𝙤 𝙦𝙪𝙚 𝙨𝙚𝙖 𝙫𝙖𝙡𝙞𝙙𝙤</div>
+    </div>
+   
+    </div>
+      
+      <div class="form-group" id="containerAlertas"> 
       <span class="label label-primary" id="patotas" >𝘿𝙞𝙧𝙚𝙘𝙘𝙞𝙤𝙣</span>
-      <input class="form-control" id="patatas" type="text" placeholder="*Campo Obligatorio*" name="direccion" [(ngModel)]="direccion">
+      <input class="form-control" formControlName="laDireccion" id="patatas" type="text" placeholder="*Campo Obligatorio*" name="direccion" [(ngModel)]="direccion" [ngClass]="{ 'is-invalid': submitted && f.laDireccion.errors }">
+      <div *ngIf="submitted && f.laDireccion.errors" class="invalid-feedback">
+        <div *ngIf="f.laDireccion.errors.required" id="alertas">𝙄𝙣𝙜𝙧𝙚𝙨𝙖 𝙩𝙪 𝙙𝙞𝙧𝙚𝙘𝙘𝙞𝙤𝙣</div>
+    </div>
+    </div>
+
+    <div class="form-group" id="containerAlertas">
       <span class="label label-primary" id="patotas" >𝙋𝙖𝙨𝙨𝙬𝙤𝙧𝙙</span>
-      <input  type="password" class="form-control" id="patatas" placeholder="🔐 Contraseña" name="password" [(ngModel)]="password">
+      <input  type="password" class="form-control" formControlName="laPass" id="patatas" placeholder="🔐 Contraseña" name="password" [(ngModel)]="password"  [ngClass]="{ 'is-invalid': submitted && f.laPass.errors }">
+      <div *ngIf="submitted && f.laPass.errors" class="invalid-feedback">
+        <div *ngIf="f.laPass.errors.required" id="alertas">𝙄𝙣𝙜𝙧𝙚𝙨𝙖 𝙪𝙣𝙖 𝙘𝙤𝙣𝙩𝙧𝙖𝙨𝙚𝙣𝙖 𝙫𝙖𝙡𝙞𝙙𝙖</div>
+    </div>
+    </div>
+
+    <div class="form-group" id="containerAlertas">
       <span class="label label-primary" id="patotas" >𝘾𝙤𝙣𝙛𝙞𝙧𝙢𝙖𝙧 𝙋𝙖𝙨𝙨𝙬𝙤𝙧𝙙</span>
-      <input  type="password" class="form-control" id="patatas" placeholder="🔐 Contraseña">
+      <input  type="password" class="form-control" formControlName="laPassConf" id="patatas" placeholder="🔐 Contraseña">
+      <div >
+        <div *ngIf="checarSiSonIguales()" id="alertas">𝙇𝙖𝙨 𝙘𝙤𝙣𝙩𝙧𝙖𝙨𝙚𝙣𝙖𝙨 𝙣𝙤 𝙘𝙤𝙞𝙣𝙘𝙞𝙙𝙚𝙣</div>
+    </div>
+    </div>
+
+
+
     </div>
       <div class="form-group">
-        <button type="button" class="btn btn-primary" (click)="crearUsuario()">𝙍𝙚𝙜𝙞𝙨𝙩𝙧𝙖𝙧𝙨𝙚</button>
+        <button type="submit" class="btn btn-primary">𝙍𝙚𝙜𝙞𝙨𝙩𝙧𝙖𝙧𝙨𝙚</button>
         
     </div>
 

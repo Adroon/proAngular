@@ -1,0 +1,102 @@
+nav.navbar {
+    justify-content: center;
+    background-color: transparent;
+    width: 100%;
+}
+#contenedorNav{
+   max-width: 100%;
+   background-color: rgba(153,51,255,0.2);
+}
+#txtNav{
+    color: white;
+}
+nav.navbar b{
+    color:white;    
+}
+#fotologo{
+    width: 5%;
+}
+#COMOFUNCA{
+    color:white;
+}
+#cartas{
+    background-color: transparent;
+}
+#wtf{
+    color:white
+}
+#xd{
+    color: white;
+}
+#fotoproducto{
+    float: left;
+    background-color: transparent;
+    width: 30%;
+    margin-top: 2%;
+    border: transparent;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+#chamullo{
+    
+    background-color: transparent;
+    width: 40%;
+    height: 60%;
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+#contenedorCuerpo{
+    -webkit-box-shadow: 0px 10px 43px 40px rgba(0,0,0,0.51);
+    -moz-box-shadow: 0px 10px 43px 40px rgba(0,0,0,0.51);
+    box-shadow: 0px 10px 43px 40px rgba(0,0,0,0.51);
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#maschamullo{
+    -webkit-box-shadow: 0px 10px 43px 40px rgba(0,0,0,0.51);
+    -moz-box-shadow: 0px 10px 43px 40px rgba(0,0,0,0.51);
+    box-shadow: 0px 10px 43px 40px rgba(0,0,0,0.51);
+    background-color: transparent;
+    width: 40%;
+    height: 60%;
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+#fotoCarta{
+    height: 170px;
+    width: auto;  
+}
+#fotoCarta1{
+    height: 200px;
+    width: 230px;
+}
+#fotoCarta2{
+    height: 300px;
+    width: 250px;
+}
+#log{
+    width: 60%;
+    margin-left: 20%;
+}
+#ASD{
+    
+    color: white;
+    font-style: italic;
+}
+#descripcion{
+   
+    float: right;
+    background-color: transparent;
+    font-style: italic;
+   
+
+    margin-top: 2%;
+    margin-bottom: 0%;  
+}
+#producto{
+    
+    background-color: transparent;
+    display: flex;
+    margin-bottom: 0%;
+    margin-top: 2%;
+}
