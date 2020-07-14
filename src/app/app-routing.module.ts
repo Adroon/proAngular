@@ -13,6 +13,7 @@ import { UsuarioLogeadoComponent } from './components/privado/iniciolog/usuario-
 import { LoginGuard } from './guards/login.guard';
 import { PantallaProductonologComponent } from './components/privado/pantalla-productonolog/pantalla-productonolog.component';
 import { BuscarComponent } from './components/privado/buscar/buscar.component';
+import { ComofuncaComponent } from './components/comofunca/comofunca.component';
 
 
 
@@ -25,6 +26,8 @@ const routes: Routes = [
   {path : "registro" , component:RegistroComponent},
   {path :  "buscar" , component:Buscar2Component},
   {path : "pantalla-producto" , component:PantallaProductoComponent},
+  {path : "comofunca", component:ComofuncaComponent},
+
 
   {path: "privado", component:PruebaComponent, canActivate: [LoginGuard],
     children:[
@@ -35,7 +38,9 @@ const routes: Routes = [
       {path : "agregar-producto" , component:AgregarProductoComponent},
       {path : "mis-productos/:id" , component:MisProductosComponent},
       {path : "pantalla-producto", component:PantallaProductonologComponent},
-      {path : "buscar" , component:BuscarComponent}
+      {path : "buscar" , component:BuscarComponent},
+      
+
     ]
   },
 

@@ -20,14 +20,23 @@ nav.navbar {
     color: white;
 }
 #patotas{
+
     color:white;
     font-size: 20px;  
 } 
+/*
 #patatas{
-    margin-bottom: 10%;
 }
+#containerAlertas{
+}
+*/
 #datos{
     padding: 81px 0px 1px 0px;
+}
+#alertas{
+    color:rgb(255, 101, 62);
+    font-size: 20px;
+    
 }
 #foto{
     margin-top: 20px;

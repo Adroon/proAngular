@@ -11,10 +11,13 @@ import { MisProductosComponent } from './components/privado/mis-productos/mis-pr
 import { PerfilComponent } from './components/privado/perfil/perfil.component';
 import { BuscarComponent } from './components/privado/buscar/buscar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Buscar2Component } from './components/buscar2/buscar2.component';
 import { PantallaProductoComponent } from './components/pantalla-producto/pantalla-producto.component';
 import { UsuarioLogeadoComponent } from './components/privado/iniciolog/usuario-logeado.component';
+import { ComofuncaComponent } from './components/comofunca/comofunca.component';
+
+
 
 @NgModule({
   declarations: [
@@ -29,13 +32,16 @@ import { UsuarioLogeadoComponent } from './components/privado/iniciolog/usuario-
     BuscarComponent,
     Buscar2Component,
     PantallaProductoComponent,
-    UsuarioLogeadoComponent 
+    UsuarioLogeadoComponent,
+    ComofuncaComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
