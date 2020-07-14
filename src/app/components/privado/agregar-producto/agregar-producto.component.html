@@ -18,7 +18,7 @@
             <a class="nav-link" routerLink="/privado/perfil/{{user.id}}" id="txtNav">𝙋𝙚𝙧𝙛𝙞𝙡<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" routerLink="/privado/mis-productos" id="txtNav">𝙈𝙞𝙨 𝙋𝙧𝙤𝙙𝙪𝙘𝙩𝙤𝙨<span class="sr-only">(current)</span></a>
+            <a class="nav-link" routerLink="/privado/mis-productos/{{user.id}}" id="txtNav">𝙈𝙞𝙨 𝙋𝙧𝙤𝙙𝙪𝙘𝙩𝙤𝙨<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" routerLink="/privado/agregar-producto" id="txtNav">𝘼𝙜𝙧𝙚𝙜𝙖𝙧 𝙪𝙣 𝙥𝙧𝙤𝙙𝙪𝙘𝙩𝙤<span class="sr-only">(current)</span></a>
@@ -46,10 +46,11 @@
         <div id="cbotipo" class="form-group">
           <select class="form-control" name="tipo" [(ngModel)]="tipo" >
             <option value="-1" selected>Seleccione Categoría</option>
-            <option value="deporte">Deporte</option>
+            <option value="deporte">Articulos del hogar</option>
             <option value="tecnologia">Tecnología</option>
-            <option value="cocina">Hogar</option>
-            <option value="moda">Moda</option>
+            <option value="cocina">Ropa/accesorios</option>
+            <option value="moda">Instrumentos musicales</option>
+            <option value="otro">Otros</option>
           </select>
         </div>
         <div class="container form-inline" id="contenedorN">

@@ -28,7 +28,8 @@ productosporID:Producto[];
   constructor(private router: Router, private servicio: UserService, private _routeParams: ActivatedRoute, private serviciop: ProductoService) { }
 
   ngOnInit(): void {
-    this.user = this._routeParams.snapshot.params['id'];
+    this.user = JSON.parse(localStorage.getItem("user"));
+    // this.user = this._routeParams.snapshot.params['id'];
     this.idUsuario = this._routeParams.snapshot.params['id'];
     this.idProducto = this._routeParams.snapshot.params['id'];
     this.cargarProductos();

@@ -16,6 +16,7 @@ import { Buscar2Component } from './components/buscar2/buscar2.component';
 import { PantallaProductoComponent } from './components/pantalla-producto/pantalla-producto.component';
 import { UsuarioLogeadoComponent } from './components/privado/iniciolog/usuario-logeado.component';
 import { ComofuncaComponent } from './components/comofunca/comofunca.component';
+import { PantallaProductonologComponent } from './components/privado/pantalla-productonolog/pantalla-productonolog.component';
 
 
 
@@ -34,6 +35,7 @@ import { ComofuncaComponent } from './components/comofunca/comofunca.component';
     PantallaProductoComponent,
     UsuarioLogeadoComponent,
     ComofuncaComponent,
+    PantallaProductonologComponent
    
   ],
   imports: [

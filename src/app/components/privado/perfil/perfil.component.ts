@@ -9,6 +9,7 @@ import { User } from '../../model/User';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
+user:User;
 nombre:string;
 direccion:string;
 apellido:string;
@@ -18,6 +19,7 @@ idUsuario:number;
   constructor(private servicio: UserService, private router: Router, private _routeParams: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.user = JSON.parse(localStorage.getItem("user"));
     this.idUsuario = this._routeParams.snapshot.params['id'];
     this.cargarUsuarioPorId(this.idUsuario);
   }
