@@ -8,11 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./pantalla-productonolog.component.css']
 })
 export class PantallaProductonologComponent implements OnInit {
-user:User;
+  user:User;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.user = JSON.parse(localStorage.getItem("user"));
+    console.log(this.user)
   }
   logout(){
     localStorage.removeItem( "user" );
